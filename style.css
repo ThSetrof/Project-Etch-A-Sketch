@@ -10,6 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: salmon;
 }
 
 .pixelGrid{
@@ -28,8 +29,9 @@ body{
 }
 
 .pixel{
-    background-color: salmon;
+    background-color: antiquewhite;
     width: 24px;
     height: 24px;
     border-radius: 4px;
 }
+
