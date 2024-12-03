@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+:root{
+    --grid-width: 600px;
+    --grid-gap: 2px;
+    --grid-padding: 12px
+}
+
+
 
 body{
     height: 100vh;
@@ -16,16 +23,50 @@ body{
 .pixelGrid{
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    padding: 12px 12px;
+    justify-content: center;
+    padding: var(--grid-padding);
     border: 2px solid darkslategray;
-    width: fit-content;
+    width: var(--grid-width);
+    height: var(--grid-width);
     border-radius: 4px;
+
+    
 }
 
 .row{
     display: flex;
-    gap: 2px;
+    justify-content: center;
+
+}
+
+.row:first-child{
+    .pixel{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+}
+
+.row:last-child{
+    .pixel{
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+
+
+
+
+
+.pixel:first-child{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+
+.pixel:last-child{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .pixel{
@@ -33,5 +74,6 @@ body{
     width: 24px;
     height: 24px;
     border-radius: 4px;
+    transition: all .10s ease-in;
 }
 
