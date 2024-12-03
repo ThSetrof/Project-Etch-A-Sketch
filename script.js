@@ -8,14 +8,11 @@ let rootStyle = getComputedStyle(document.querySelector(':root'));
 const gridPadding = parseInt(rootStyle.getPropertyValue('--grid-padding'));
 const gridWidth = parseInt(rootStyle.getPropertyValue('--grid-width'));
 const gridGap = parseInt(rootStyle.getPropertyValue('--grid-gap'));
-const pixelBtn = document.querySelector('button');
 
-pixelBtn.addEventListener('click', e => {
-    let n = parseInt(prompt('Enter number of pixel: '))
-    grid.textContent = '';
-    createPixelGrid(n)
 
-});
+const pixelSizeInput = document.getElementById('pixelSize');
+console.log(pixelSizeInput.value);
+
 
 
 
