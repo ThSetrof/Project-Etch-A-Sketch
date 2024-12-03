@@ -4,7 +4,7 @@ let pixelPerRow = 10;
 let pixelHoverColor = 'darkslategray';
 
 let grid = document.querySelector('.pixelGrid');
-var rootStyle = getComputedStyle(document.querySelector(':root'));
+let rootStyle = getComputedStyle(document.querySelector(':root'));
 const gridPadding = parseInt(rootStyle.getPropertyValue('--grid-padding'));
 const gridWidth = parseInt(rootStyle.getPropertyValue('--grid-width'));
 const gridGap = parseInt(rootStyle.getPropertyValue('--grid-gap'));
@@ -15,13 +15,12 @@ pixelBtn.addEventListener('click', e => {
     grid.textContent = '';
     createPixelGrid(n)
 
-})
+});
 
 
 
 function createElement(tag){
-    let element = document.createElement(tag);
-    return element;
+    return document.createElement(tag);
 }
 
 function createPixelGrid(pixelPerRow){
@@ -52,12 +51,8 @@ function changePixelColor(e){
 
 
 
-
 function getPixelSize(width, padding, gap, pixelPerRow){
-    console.log(width, padding, gap, pixelPerRow );
-
-    const pixelSize = (width - (padding * 2) - (2 * gap * pixelPerRow)  ) / pixelPerRow;
-    return pixelSize;
+    return  (width - padding * 2) / pixelPerRow;
 }
 
 
