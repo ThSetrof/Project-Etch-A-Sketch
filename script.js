@@ -55,6 +55,6 @@ function getPixelSize(width, padding, gap, pixelPerRow){
 
 createPixelGrid(pixelPerRow);
 
-
+console.log(pixelPerRow);
 
 
