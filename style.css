@@ -41,41 +41,13 @@ body{
 
 }
 
-.row:first-child{
-    .pixel{
-        border-top-right-radius: 0px;
-        border-top-left-radius: 0px;
-    }
-}
 
-.row:last-child{
-    .pixel{
-        border-bottom-right-radius: 0px;
-        border-bottom-left-radius: 0px;
-    }
-}
-
-
-
-
-
-
-.pixel:first-child{
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-
-
-.pixel:last-child{
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
 
 .pixel{
     background-color: antiquewhite;
     width: 24px;
     height: 24px;
-    border-radius: 4px;
+
     transition: all .10s ease-in;
 }
 
